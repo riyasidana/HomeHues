@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.homehues.screens.ProductDetailsScreen
 import com.example.homehues.screens.ProductScreen
 import com.example.homehues.ui.theme.HomeHuesTheme
 
@@ -21,7 +22,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             HomeHuesTheme {
 
-                    ProductScreen()
+                    //ProductScreen()
+                ProductDetailsScreen()
 
             }
         }

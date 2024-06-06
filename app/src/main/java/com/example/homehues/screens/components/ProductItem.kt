@@ -24,7 +24,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -86,7 +88,7 @@ fun ProductItem(
             painter = painterResource(id = product.imageRes), contentDescription = null,
 
             modifier = Modifier
-                .fillMaxSize(0.8f)
+                .fillMaxSize(0.75f)
                 .align(Alignment.Center)
         )
 
@@ -102,7 +104,11 @@ fun ProductItem(
             Text(
                 text = "Rs. ${product.price}",
                 fontSize = 12.sp,
-                modifier = Modifier.padding(end = 8.dp)
+                modifier = Modifier.padding(end = 8.dp, bottom = 8.dp)
+                    .align(Alignment.End),
+                style = TextStyle(
+                    textDecoration = TextDecoration.LineThrough
+                )
             )
         }
 
